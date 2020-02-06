@@ -8,3 +8,5 @@ WORKDIR /app
 RUN npm install
 EXPOSE 8080
 CMD node server.js
+
+# live at http://3.225.139.239:8080/
