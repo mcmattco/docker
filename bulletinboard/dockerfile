@@ -1,0 +1,10 @@
+# mkdir src
+# git clone https://github.com/dockersamples/node-bulletin-board/tree/master/bulletin-board-app src
+
+FROM node
+RUN mkdir -p /app
+ADD /src/bulletin-board-app/ /app/
+WORKDIR /app
+RUN npm install
+EXPOSE 8080
+CMD node server.js
